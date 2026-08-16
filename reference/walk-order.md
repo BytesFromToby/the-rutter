@@ -26,30 +26,52 @@ a file, you are looking in the wrong place — look for *when the thing happens*
 
 **3. Open exactly one card.**
 
-If you need two, note it and open the second one. If you need four, the map is wrong —
-report that, rather than compensating by reading everything.
-
 **4. Read Hits and Does not hit before you read anything else.**
 
 That is the part you came for. **Does not hit** is not filler: it names the neighbour you
 were about to reach for and tells you why the reach fails.
 
-**5. Stop.**
+**5. Stop — and where you stop depends on which question you came with.**
 
-You now know where your change goes and what it will disturb. Go and read the actual code
-for that one position. The map's job is finished.
+Two questions, two stop conditions. Know which one you are asking:
+
+**A lookup — *what is X?*** One card. Stop there. You have your answer and the rest of the
+map is noise.
+
+**A change — *what will this disturb?*** One card, then **only the cards its Hits names**,
+and only their Hits in turn. Stop when the edges close — when the cards you reach are ones
+you have already read and no new noun appears. That traversal is what `Hits` is for; a card
+that names three consequences is handing you three doors and expecting you to try them.
+
+**Following named edges is not browsing.** The rule you must never break is opening the
+objects folder to look around. Every card you open on a change walk was *named to you by a
+card you had already earned*. If you cannot point at the card that sent you, you are
+browsing — go back.
+
+Then go and read the actual code for the position you landed on. The map's job is finished.
 
 ---
 
 ## Budget
 
-A full walk should cost **the catalog plus one card**. Two cards is a normal ceiling for a
-change that touches a boundary between subsystems.
+A lookup costs **the catalog plus one card**. If it costs three, the catalog is indexed
+wrong — say so.
 
-If you have opened four cards and still do not know where your change goes, **do not keep
-opening cards.** Say the map did not answer, and name the question it failed on. A reader
-who slurps the map to compensate for a bad map produces confident nonsense and hides the
-defect from whoever maintains it.
+A change walk costs one card plus its edges, and the honest number depends on how
+cross-cutting the noun is. A leaf position closes in two or three cards; something written
+by half the pass may take eight. That is the territory being large, not the walk being
+undisciplined — as long as every card was named by a previous one.
+
+The failure to watch for is different in each case:
+
+- **You have opened four cards and still do not know *where the change goes*.** That is a
+  broken map. Stop, say the map did not answer, and name the question it failed on.
+- **You are opening cards the map never named**, because none of the named ones helped.
+  Same conclusion — stop and report.
+
+A reader who slurps the map to compensate for a bad map produces confident nonsense and
+hides the defect from whoever maintains it. A reader who follows the edges until they close
+is using the map exactly as built.
 
 ---
 

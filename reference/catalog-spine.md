@@ -18,8 +18,11 @@ A worked catalog against a real territory is in [`../examples.md`](../examples.m
 Territory: <repo> @ <commit sha>, walked <date>
 Cards: <n> · Unmapped: <what was deliberately left out>
 
-**How to use this:** find your question below, open that ONE card, stop.
-Do not load the objects folder. If a card and the real file disagree, the file wins.
+**How to use this:** find your question below and open that ONE card.
+· *What is X?* — read it and stop.
+· *What will my change disturb?* — read its **Hits**, then open only the cards it names,
+  and stop when they stop naming new ones.
+Never browse the objects folder. If a card and the real file disagree, the file wins.
 
 ## The spine — <loop fn> in execution order
 

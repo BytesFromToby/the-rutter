@@ -3,8 +3,11 @@
 Territory: `BytesFromToby/Polis` @ `04ec8f4`, walked 2026-08-16
 Cards: 36 · Unmapped: Vue frontend, API routes, LLM stack, `Planning/specs`
 
-**How to use this:** find your question below, open that ONE card, stop.
-Do not load the objects folder. If a card and the real file disagree, the file wins.
+**How to use this:** find your question below and open that ONE card.
+· *What is X?* — read it and stop.
+· *What will my change disturb?* — read its **Hits**, then open only the cards it names,
+  and stop when they stop naming new ones.
+Never browse the objects folder. If a card and the real file disagree, the file wins.
 
 ## The spine — `run_cycle` in `backend/engine/cycle/runner.py`, execution order
 

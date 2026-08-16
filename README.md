@@ -19,6 +19,12 @@ The chart is the folder tree, and it already exists. The rutter does not.
 Never load the objects folder. Never add the whole map to a project. If a reader has to hold
 all of it, the map failed and the map is what needs fixing — not the reader.
 
+The one exception is not an exception to that. A reader asking *what will my change disturb*
+follows the cards named in a card's **Hits** section, and stops when those stop naming new
+ones. Every door was handed to them by a card they had already earned — that is the map
+working, not a reader browsing. If you cannot point at the card that sent you, you are
+browsing.
+
 ---
 
 ## What to feed it
@@ -65,7 +71,9 @@ walk is the same, and it is short:
 1. Open `catalog.md`. Nothing else.
 2. Find your question. Open **one** card.
 3. Read its **Hits** and **Does not hit**.
-4. Stop.
+4. Stop — if you came to ask *what is X*.
+5. If you came to make a change, open only the cards that card's **Hits** named, and their
+   Hits in turn. Stop when the edges close and no new noun appears.
 
 Full protocol, including what to do when your question isn't in the catalog and what to do
 when a card disagrees with the code: [`reference/walk-order.md`](reference/walk-order.md).
