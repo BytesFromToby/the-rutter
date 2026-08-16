@@ -110,6 +110,7 @@ authored as a walkable artifact, for territories that only ever got the first on
 | [`reference/walk-order.md`](reference/walk-order.md) | How a cold reader walks the output |
 | [`reference/collisions.md`](reference/collisions.md) | Naming collisions to carry into the walk |
 | [`example-map/`](example-map/) | **The product** — a real rutter of Polis, 36 cards. Start at [`catalog.md`](example-map/catalog.md) |
+| [`proof/`](proof/) | A cold agent given only the catalog, asked where a change goes. Log, answer, and the rule it broke |
 
 ---
 
