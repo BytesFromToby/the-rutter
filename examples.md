@@ -69,6 +69,31 @@ look interchangeable, and one silently overwrites the other seven positions late
 
 ---
 
+## An object card — the carrier nothing imports
+
+From [`objects/action-results.md`](example-map/objects/action-results.md). An object card is
+indexed by who writes it, not by where it lives:
+
+> **Written by:** almost every position — 4, 5, 6, 7, 10, 11, 13, 14, 15, 16, 17, 20, 21,
+> 22, 23, 24, 25
+>
+> **Per-pass, not cross-tick.** Initialised at `runner.py:87`, discarded at 28.
+>
+> ## Shape and why
+> Positions that never call each other move each other through this list: the deal tick learns
+> what a faction did, and the Assembly learns that someone agitated, without either subsystem
+> importing the other.
+>
+> ## Hits
+> - **12-deal-tick** — flattens it to `acted_this_cycle` (`end_of_cycle.py:169-171`)
+> - **Anything that appends after position 23** — positions 24 and 25 append results that no
+>   reader in this pass will see.
+
+Seventeen writers, four readers, and a dead zone at the end where appends go nowhere. It is
+carded because several positions write it, not because it survives the pass — an object is
+defined by the number of writers, and this one carries more movement than anything else in
+the territory.
+
 ## A ghost card — the one with a passing test
 
 From [`objects/leverage-steal-bonus.md`](example-map/objects/leverage-steal-bonus.md):
@@ -95,6 +120,26 @@ A comment, a user-visible narrative string, and a **green committed test** all c
 mechanic that does nothing. This is why ghosts get cards: nothing here fails loudly.
 
 ---
+
+## A leftover — and why it is not a ghost
+
+The card above and this row both have a passing committed test. They are classified
+differently, and the difference is the whole live/leftover/ghost line.
+
+From [`registers/leftovers.md`](example-map/registers/leftovers.md):
+
+> | `process_moneylender`'s `removal_countdown` branch | `special/moneylender.py:59-73`
+> implements a full removal-coalition countdown against a `List[int]` parameter, and a
+> committed test exercises it (`tests/test_special_factions.py:122-133`). | The runner calls
+> it at `runner.py:245` without that argument, so the parameter is always `None` and the
+> branch never runs in a real pass. |
+
+Reach for this and you get a complete, working countdown — it is simply never called. The
+reach **succeeds**. That is a leftover: inert, honest, harmless until mistaken for live.
+
+Reach for `_leverage_steal_bonus` and you get silence — you set it, nothing errors, nothing
+happens. The reach **appears** to succeed. That is a ghost, and that is why it gets a card
+of its own while this one gets a row in a register.
 
 ## One change, traced
 
